@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Busiest Day</title>
+    <style>
+      table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        fonnt-family: Arial, sans-serif;
+        box-shadow: 0 4px 8px rgba(0,0,0,1);
+      }
+
+      th {
+        background-color: #2c3e50;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 15px;
+      }
+
+      td {
+        border: 1px solid #dddddd;
+        padding: 12px;
+        text-align: center;
+      }
+
+      .break-row {
+        background-color: #fcf3cf;
+        font-style: italic;
+      }
+
+      .time-column {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        width: 30%;
+      }
+
+      #deadline {
+        color: #e74c3c;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align:center;">Daily Schedule: Monday, May 11th</h2>
+    <table>
+      <colgroup>
+        <col class="time-column">
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Event</th>
+        </tr>
+      </thead>
+     <tbody>
+            <tr>
+                <td>6:00 AM</td>
+                <td>Wake up & Shower</td>
+            </tr>
+            <tr>
+                <td>7:00 AM</td>
+                <td>Driive to School</td>
+            </tr>
+            <tr>
+                <td>12:30 PM</td>
+                <td>Lunch</td>
+            </tr>
+            <tr class="break-row">
+                <td>2:30 PM</td>
+                <td>Drive Home</td>
+            </tr>
+            <tr>
+                <td>03:00 PM</td>
+                <td>Study for AP Calc BC</td>
+            </tr>
+            <tr>
+                <td>04:00 PM</td>
+                <td id="deadline">Final Assignment Submission</td>
+            </tr>
+            <tr>
+                <td>05:30 PM</td>
+                <td>Go to Work</td>
+            </tr>
+            <tr>
+                <td>08:00 PM</td>
+                <td>Come Home and eat Dinner</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    
+  </body>
+</html>
