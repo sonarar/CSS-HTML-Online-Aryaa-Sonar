@@ -1,26 +1,74 @@
-<!DOCTYPE>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fish Puzzle</title>
+    <title>Snowman Puzzle Assignment</title>
     <style>
-      .container {
-        display: ; /*Use flex coding*/
-        flex-direction: ;
-        flex-wrap: ;
-        width: ;
-      .hidden (
-        display: ;
-      }
+        body {
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "puzzle"
+                "footer";
+            grid-gap: 20px;
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #f0f4f8;
+        }
+
+        header { grid-area: header; text-align: center; }
+        main   { grid-area: puzzle; display: flex; justify-content: center; }
+        footer { grid-area: footer; text-align: center; color: #555; }
+
+        .puzzle-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 600px; 
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .puzzle-container img {
+            width: 200px; 
+            height: auto;
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
-  </head>
-  <body>
-    <h1>A Fishy Puzzle</h1>
-    <div class="">
-      <img src="images/">
-      <!--Add the rest of hte puzzle pieces as images all int the same div-->
-      <img src="images/" class="">
-    </div>
-  </body>
+</head>
+<body>
+
+    <header>
+        <h1>Aryaa's Puzzle: The Snowman</h1>
+    </header>
+
+    <main>
+        <div class="puzzle-container">
+            <img src="images/puzzle2_A.jpg" alt="Piece 1">
+            <img src="images/puzzle2_B.jpg" alt="Piece 2">
+            <img src="images/puzzle2_C.jpg" alt="Piece 3">
+            <img src="images/puzzle2_D.jpg" alt="Piece 4">
+            <img src="images/puzzle2_E.jpg" alt="Piece 5">
+            <img src="images/puzzle2_F.jpg" alt="Piece 6">
+            <img src="images/puzzle2_G.jpg" alt="Piece 7">
+            <img src="images/puzzle2_H.jpg" alt="Piece 8">
+            <img src="images/puzzle2_I.jpg" alt="Piece 9">
+            <img src="images/puzzle2_J.jpg" alt="Piece 10">
+            <img src="images/puzzle2_K.jpg" alt="Piece 11">
+            <img src="images/puzzle2_L.jpg" alt="Piece 12">
+            
+            <img src="images/puzzle2_M.jpg" class="hidden" alt="Trick Piece">
+        </div>
+    </main>
+
+    <footer>
+        <p>Completed on: May 15, 2026</p>
+    </footer>
+
+</body>
 </html>
