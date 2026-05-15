@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2 The Imitation</title>
+    
+    <style>
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 30px;                            
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+  
+        @media (max-width: 992px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-container {
+                grid-template-columns: 1fr;           
+            }
+        }
+
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 280px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #e1e8ed;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        .project-penguins img {
+            width: 100%;
+
+            clip-path: ellipse(50% 38% at 50% 50%);
+            object-fit: cover;
+        }
+
+        .project-football {
+            padding: 0; 
+        }
+
+        .field-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 25px; 
+            background-color: #ffffff;
+        }
+
+        .field-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border: 1px solid #ccc;
+        }
+
+
+        .border-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr); 
+            grid-template-rows: repeat(5, 1fr);   
+            padding: 4px;
+            pointer-events: none;
+        }
+
+        .border-grid span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: #444;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .project-dino img {
+            max-height: 240px;
+            width: auto;
+            filter: drop-shadow(10px 10px 8px rgba(0, 0, 0, 0.45));
+        }
+
+        .project-seagull {
+            perspective: 1000px; 
+        }
+
+        .project-seagull img {
+            width: 100%;
+            transform: rotateX(25deg) rotateY(-12deg) rotateZ(-2deg);
+            box-shadow: -15px 25px 20px rgba(0, 0, 0, 0.35);
+            border-radius: 4px;
+        }
+
+        .project-butterfly img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 120px 15px 120px 15px;
+        }
+
+        .project-stage {
+            padding: 0;
+        }
+
+        .stage-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+        }
+
+        .stage-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6) contrast(1.4) saturate(1.1);
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-align: center;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 
+                         0 0 25px rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gallery-container">
+        
+        <div class="card project-penguins">
+            <img src="penguins.jpg" alt="Penguins">
+        </div>
+
+        <div class="card project-football">
+            <div class="field-container">
+                <img src="football_field.jpg" class="field-bg" alt="Football Field">
+                <div class="border-grid">
+                    <span>X</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>X</span>
+                    <span>O</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span>O</span>
+                    <span>O</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span>O</span>
+                    <span>O</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span>O</span>
+                    <span>X</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>X</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card project-dino">
+            <img src="dinosaur.png" alt="Dinosaur">
+        </div>
+
+        <div class="card project-seagull">
+            <img src="seagull.png" alt="Seagull">
+        </div>
+
+        <div class="card project-butterfly">
+            <img src="butterfly.jpg" alt="Butterfly">
+        </div>
+
+        <div class="card project-stage">
+            <div class="stage-wrapper">
+                <img src="theater_stage.jpg" alt="Stage">
+                <div class="overlay-text">Presenting</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
