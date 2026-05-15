@@ -1,0 +1,50 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #2e7d32; 
+    color: white;
+    border-radius: 8px;
+}
+
+.tutorial-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.step-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.step-img {
+    flex: 1;
+    max-width: 300px;
+    border: 3px solid #2e7d32;
+    border-radius: 5px;
+}
+
+.video-section {
+    text-align: center;
+    margin-top: 40px;
+}
