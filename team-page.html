@@ -1,58 +1,60 @@
-<DOCTYPE html>
-  <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Our Team: The Cookie Chefs</title>
-        <style>
-          body {
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team: The Cookie Chefs</title>
+    <style>
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color-colorL #ffffff;
-            coloe: #333;
-          }
+            background-color: #ffffff;
+            color: #333; 
+        }
 
-          nav {
+        nav {
             background-color: #333;
             position: sticky;
             top: 0;
             width: 100%;
             z-index: 1000;
-          }
+        }
 
-          nav ul {
+        nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
-          }
+        }
 
-          nav li {
+        nav li {
             float: left;
-          }
-          nav li a {
+        }
+
+        nav li a {
             display: block;
             color: white;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
-          }
+        }
 
-          nav li.active {
+        nav li.active {
             background-color: #4CAF50;
+        }
 
-          header {
+        header {
             padding: 20px 40px;
             position: relative;
-          }
+        }
 
-          h1{
+        h1 {
             margin: 0;
             font-size: 2.5rem;
-          }
+        }
 
-          .assignment-tag {
+        .assignment-tag {
             position: absolute;
             top: 30px;
             left: 350px;
@@ -89,15 +91,10 @@
             float: left;
             width: 120px;
             height: 120px;
+            object-fit: cover; 
             background-color: #e0e0e0;
             border: 1px solid #999;
             margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            color: #666;
-            text-align: center;
         }
 
         .bio-text {
@@ -107,49 +104,52 @@
     </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Contact</a></li>
-      <li class="active"><a href="#">Staff</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="active"><a href="#">Staff</a></li>
+        </ul>
+    </nav>
 
-  <header>
-    <h1>Our Team</h1>
-    <div class="assignment-tag">4.1 Assignment: Team Page</div>
-  </header>
+    <header>
+        <h1>Our Team</h1>
+        <div class="assignment-tag">4.1 Assignment: Team Page</div>
+    </header>
 
-  <main class="team-container">
-    <div class="team-member">
-      <h3>Bob Nameguy, <span>President and CEO</span></h3>
-      <div class="https://static0.srcdn.com/wordpress/wp-content/uploads/2022/06/Pokemon-Quagsire-Working-Fan-Project-Water-Type.jpg?w=1200&h=675&fit=crop">Image placeholder</div>
-      <p class="bio-text">
-        blah lah blah blah ablhfwefffnjlfnkffndf
-      </p>
-    </div>
-    <div class="team-member">
-      <h3>Bob Nameguy, <span>President and CEO</span></h3>
-      <div class="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/02/pokemon-anime-dragonite-backpack-feature.jpg?w=1600&h=900&fit=crop">Image placeholder</div>
-      <p class="bio-text">
-        blah lah blah blah ablhfwefffnjlfnkffndf
-      </p>
-    </div>
-    <div class="team-member">
-      <h3>Bob Nameguy, <span>President and CEO</span></h3>
-      <div class="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/06/Pikachu-color-model-publicity-cel.jpg">Image placeholder</div>
-      <p class="bio-text">
-        blah lah blah blah ablhfwefffnjlfnkffndf
-      </p>
-    </div>
-    <div class="team-member">
-      <h3>Bob Nameguy, <span>President and CEO</span></h3>
-      <div class="https://archives.bulbagarden.net/media/upload/thumb/1/19/Goh_Froakie.png/250px-Goh_Froakie.png">Image placeholder</div>
-      <p class="bio-text">
-        blah lah blah blah ablhfwefffnjlfnkffndf
-      </p>
-    </div>
-  </main>
+    <main class="team-container">
+        <div class="team-member">
+            <h3>Quagsire, <span>President and CEO</span></h3>
+            <img class="image-placeholder" src="https://static0.srcdn.com/wordpress/wp-content/uploads/2022/06/Pokemon-Quagsire-Working-Fan-Project-Water-Type.jpg?w=1200&h=675&fit=crop" alt="Quagsire">
+            <p class="bio-text">
+                Quagsire has a very relaxed attitude toward life and is often found floating in clean water.
+            </p>
+        </div>
+
+        <div class="team-member">
+            <h3>Dragonite, <span>Treasurer and CFO</span></h3>
+            <img class="image-placeholder" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/02/pokemon-anime-dragonite-backpack-feature.jpg?w=1600&h=900&fit=crop" alt="Dragonite">
+            <p class="bio-text">
+                Dragonite is a kindhearted Pokémon that leads lost ships in a storm to the safety of land.
+            </p>
+        </div>
+
+        <div class="team-member">
+            <h3>Pikachu, <span>Director of IT</span></h3>
+            <img class="image-placeholder" src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/06/Pikachu-color-model-publicity-cel.jpg" alt="Pikachu">
+            <p class="bio-text">
+                Pikachu is the expert on all things electric and handles our server maintenance with high voltage.
+            </p>
+        </div>
+
+        <div class="team-member">
+            <h3>Froakie, <span>Chief of HR</span></h3>
+            <img class="image-placeholder" src="https://archives.bulbagarden.net/media/upload/thumb/1/19/Goh_Froakie.png/250px-Goh_Froakie.png" alt="Froakie">
+            <p class="bio-text">
+                Froakie keeps a close eye on the environment and uses bubbles to keep the office organized.
+            </p>
+        </div>
+    </main>
 </body>
 </html>
