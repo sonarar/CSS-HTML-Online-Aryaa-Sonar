@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect with fellow animation hobbyists and share your feedback or project proposals.">
+    <title>Contact the Creator</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <header>
+            <h1>Connect & Collaborate</h1>
+            <p>Join our budding community of independent digital animators</p>
+        </header>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="creators.html">YouTube Creators</a></li>
+                <li><a href="studios.html">Animation Studios</a></li>
+                <li><a href="tools.html">Animation Tools</a></li>
+                <li><a href="contact.html" class="active">Get in Touch</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Animation Community Questionnaire</h2>
+            <p>Have an animation project idea or a creator recommendation? Drop a message down below to get featured on our catalog expansion pipeline.</p>
+
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label id="lbl-name" for="user-name">Your Full Name:</label>
+                    <input type="text" id="user-name" name="userName" required placeholder="e.g., Jane Doe" aria-labelledby="lbl-name">
+                </div>
+
+                <div class="form-group">
+                    <label id="lbl-email" for="user-email">Email Address:</label>
+                    <input type="email" id="user-email" name="userEmail" required placeholder="name@example.com" aria-labelledby="lbl-email">
+                </div>
+
+                <div class="form-group">
+                    <label id="lbl-style" for="animation-style">Your Favorite Animation Style:</label>
+                    <select id="animation-style" name="animationStyle" aria-labelledby="lbl-style">
+                        <option value="traditional">Traditional 2D Hand-drawn</option>
+                        <option value="cgi">3D Computer Graphics (CGI)</option>
+                        <option value="stop-motion">Stop-Motion / Claymation</option>
+                        <option value="vector">Web Vector Animation</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label id="lbl-msg" for="user-message">Share Your Project Goals or Ideas:</label>
+                    <textarea id="user-message" name="userMessage" rows="5" placeholder="Tell us about what you are currently animating..." aria-labelledby="lbl-msg"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Information</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Animation Hobbyist Portal.</p>
+        </footer>
+    </div>
+</body>
+</html>
