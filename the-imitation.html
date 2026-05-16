@@ -64,7 +64,6 @@
         display: block;
     }
 
-    /* === 1. PENGUINS FIX === */
     .project-penguins {
         background-color: #fff;
     }
@@ -76,68 +75,48 @@
 
     .project-penguins img {
         width: 100%;
-        /* Using border-radius instead of clip-path creates a clean oval border match */
         border-radius: 50%; 
         border: 4px solid #b5b5b5;
-        /* Subtle warm vintage photo filters */
         filter: sepia(0.2) saturate(1.1);
         display: block;
     }
 
-    /* === FOOTBALL FIELD === */
-    .project-football {
-        padding: 0; 
-    }
 
-    .field-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        padding: 25px; 
-        background-color: #ffffff;
-    }
+.project-football {
+    padding: 15px; 
+    background-color: #ffffff;
+}
 
-    .field-bg {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        border: 1px solid #ccc;
-    }
+.field-container {
+    position: relative;
+    width: 100%;
+    max-width: 340px; 
+    aspect-ratio: 9 / 5; 
+    margin: 0 auto;
+    
+    
+    border: 24px solid transparent;
+    border-image-source: url("images/5.4_images-assignment/tic-tac-toe.png");
+    border-image-slice: 33.33%; 
+    border-image-repeat: repeat;
+}
 
-    .border-grid {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: grid;
-        grid-template-columns: repeat(9, 1fr); 
-        grid-template-rows: repeat(5, 1fr);    
-        padding: 4px;
-        pointer-events: none;
-    }
+.field-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+    
+    filter: grayscale(1) brightness(0.9) contrast(1.1);
+    display: block;
+}
 
-    .border-grid span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 14px;
-        color: #444;
-        font-family: "Courier New", Courier, monospace;
-    }
-
-    /* === 2. DINOSAUR FIX === */
     .project-dino img {
         max-height: 220px;
         width: auto;
-        /* Changing hue-rotate to ~235deg shifts the green dinosaur to deep blue */
         filter: hue-rotate(235deg) saturate(1.5) drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.3));
     }
 
-    /* === 3. SEAGULL FIX === */
     .project-seagull {
-        /* Move the gradient background, perspective, and shadow to the CARD wrapper */
         background: linear-gradient(135deg, #cbdcf7 0%, #a1b1f7 100%);
         perspective: 1000px;
     }
@@ -145,24 +124,19 @@
     .project-seagull img {
         width: 85%;
         margin: 0 auto;
-        /* Apply the 3D rotation effects exclusively to the transparent bird image */
+
         transform: rotateX(15deg) rotateY(-20deg) rotateZ(-5deg);
-        /* Use drop-shadow filter instead of box-shadow so it targets the bird's shape, not the rectangle */
         filter: drop-shadow(-15px 20px 10px rgba(0, 0, 0, 0.3));
     }
 
-    /* === BUTTERFLY === */
-    /* Note: If your image turns entirely negative, ensure invert value matches assignment requirements */
     .project-butterfly img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 120px 15px 120px 15px;
-            /* invert(1) turns the naturally warm orange tones directly into cool neon blues */
             filter: invert(1) saturate(1.3);
     }
 
-    /* === THEATER STAGE === */
     .project-stage {
         padding: 0;
     }
@@ -211,13 +185,6 @@
         <div class="card project-football">
             <div class="field-container">
                 <img src="images/5.4_images-assignment/football_field.jpg" class="field-bg" alt="Football Field">
-                <div class="border-grid">
-                    <span>X</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>X</span>
-                    <span>O</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span>O</span>
-                    <span>O</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span>O</span>
-                    <span>O</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span>O</span>
-                    <span>X</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>O</span><span>X</span>
-                </div>
             </div>
         </div>
 
