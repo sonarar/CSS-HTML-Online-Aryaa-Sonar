@@ -6,190 +6,196 @@
     <title>CSS Modern Techniques Assignment</title>
     
     <style>
-         * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+     * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f0f4f8;
+        color: #333;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
 
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px;                                 
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 992px) {
         .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 30px;                             
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
+            grid-template-columns: repeat(2, 1fr); 
         }
+    }
 
-        @media (max-width: 992px) {
-            .gallery-container {
-                grid-template-columns: repeat(2, 1fr); 
-            }
+    @media (max-width: 600px) {
+        .gallery-container {
+            grid-template-columns: 1fr;           
         }
+    }
 
-        @media (max-width: 600px) {
-            .gallery-container {
-                grid-template-columns: 1fr;           
-            }
-        }
+    .card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 280px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #e1e8ed;
+    }
 
+    .card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
 
-        .card {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 280px;
-            overflow: hidden;
-            position: relative;
-            border: 1px solid #e1e8ed;
-        }
+    /* === 1. PENGUINS FIX === */
+    .project-penguins {
+        background-color: #fff;
+    }
+    
+    .penguins-wrapper {
+        display: block;
+        width: 100%;
+    }
 
-        .card img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+    .project-penguins img {
+        width: 100%;
+        /* Using border-radius instead of clip-path creates a clean oval border match */
+        border-radius: 50%; 
+        border: 4px solid #b5b5b5;
+        /* Subtle warm vintage photo filters */
+        filter: sepia(0.2) saturate(1.1);
+        display: block;
+    }
 
+    /* === FOOTBALL FIELD === */
+    .project-football {
+        padding: 0; 
+    }
 
-        .project-penguins {
-            background-color: #fff;
-        }
-        
-        .penguins-wrapper {
-            position: relative;
-            display: inline-block;
-            padding: 4px;
-            border: 2px solid #b5b5b5;
-            border-radius: 50% / 40%;
-        }
+    .field-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 25px; 
+        background-color: #ffffff;
+    }
 
-        .project-penguins img {
-            width: 100%;
-            clip-path: ellipse(50% 40% at 50% 50%);
+    .field-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border: 1px solid #ccc;
+    }
 
-            filter: sepia(0.35) hue-rotate(-10deg) saturate(1.2);
-            display: block;
-        }
+    .border-grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr); 
+        grid-template-rows: repeat(5, 1fr);    
+        padding: 4px;
+        pointer-events: none;
+    }
 
-        .project-football {
-            padding: 0; 
-        }
+    .border-grid span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 14px;
+        color: #444;
+        font-family: "Courier New", Courier, monospace;
+    }
 
-        .field-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            padding: 25px; 
-            background-color: #ffffff;
-        }
+    /* === 2. DINOSAUR FIX === */
+    .project-dino img {
+        max-height: 220px;
+        width: auto;
+        /* Changing hue-rotate to ~235deg shifts the green dinosaur to deep blue */
+        filter: hue-rotate(235deg) saturate(1.5) drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.3));
+    }
 
-        .field-bg {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border: 1px solid #ccc;
-        }
+    /* === 3. SEAGULL FIX === */
+    .project-seagull {
+        /* Move the gradient background, perspective, and shadow to the CARD wrapper */
+        background: linear-gradient(135deg, #cbdcf7 0%, #a1b1f7 100%);
+        perspective: 1000px;
+    }
 
-        .border-grid {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: grid;
-            grid-template-columns: repeat(9, 1fr); 
-            grid-template-rows: repeat(5, 1fr);    
-            padding: 4px;
-            pointer-events: none;
-        }
+    .project-seagull img {
+        width: 85%;
+        margin: 0 auto;
+        /* Apply the 3D rotation effects exclusively to the transparent bird image */
+        transform: rotateX(15deg) rotateY(-20deg) rotateZ(-5deg);
+        /* Use drop-shadow filter instead of box-shadow so it targets the bird's shape, not the rectangle */
+        filter: drop-shadow(-15px 20px 10px rgba(0, 0, 0, 0.3));
+    }
 
-        .border-grid span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            font-size: 14px;
-            color: #444;
-            font-family: "Courier New", Courier, monospace;
-        }
+    /* === BUTTERFLY === */
+    /* Note: If your image turns entirely negative, ensure invert value matches assignment requirements */
+    .project-butterfly img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 120px 15px 120px 15px;
+        filter: invert(1) hue-rotate(180deg) saturate(1.3);
+    }
 
-        .project-dino img {
-            max-height: 220px;
-            width: auto;
-            filter: hue-rotate(180deg) saturate(1.4) drop-shadow(10px 10px 6px rgba(0, 0, 0, 0.5));
-        }
+    /* === THEATER STAGE === */
+    .project-stage {
+        padding: 0;
+    }
 
-        .project-seagull {
-            perspective: 1000px;
-            background: linear-gradient(135deg, #b0c4de 0%, #8a95d7 100%);
-        }
+    .stage-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        overflow: hidden;
+    }
 
-        .project-seagull img {
-            width: 90%;
-            margin: 0 auto;
-            transform: rotateX(20deg) rotateY(-15deg) rotateZ(-3deg);
-            box-shadow: -20px 25px 15px rgba(0, 0, 0, 0.3);
-            border-radius: 2px;
-        }
+    .stage-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.6) contrast(1.2);
+    }
 
-        .project-butterfly img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 120px 15px 120px 15px;
-            filter: invert(1) saturate(1.3);
-        }
-
-        .project-stage {
-            padding: 0;
-        }
-
-        .stage-wrapper {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-            overflow: hidden;
-        }
-
-        .stage-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.5) contrast(1.3) blur(4px);
-            transform: scale(1.05); 
-        }
-
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #ffffff;
-            font-size: 26px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-align: center;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 
-                         0 0 20px rgba(255, 255, 255, 0.4);
-            z-index: 2;
-        }
-    </style>
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-align: center;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 
+                     0 0 20px rgba(255, 255, 255, 0.4);
+        z-index: 2;
+    }
+</style>
 </head>
 <body>
 
