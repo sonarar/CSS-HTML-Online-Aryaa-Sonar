@@ -154,11 +154,12 @@
     /* === BUTTERFLY === */
     /* Note: If your image turns entirely negative, ensure invert value matches assignment requirements */
     .project-butterfly img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 120px 15px 120px 15px;
-        filter: invert(1) hue-rotate(180deg) saturate(1.3);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 120px 15px 120px 15px;
+            /* invert(1) turns the naturally warm orange tones directly into cool neon blues */
+            filter: invert(1) saturate(1.3);
     }
 
     /* === THEATER STAGE === */
